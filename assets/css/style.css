@@ -919,6 +919,9 @@ header .mode {
     opacity: 1;
 }
 
+.experianceSection {
+    overflow-x: hidden;
+}
 .experianceSection .timeline {
     position: relative;
 }
@@ -1104,6 +1107,42 @@ header .mode {
         left: auto;
         padding-left: 30px;
     }
+}
+
+.hireMeSection{
+    border-radius: 30px;
+}
+.hireMeSection .imageContainer {
+    position: relative;
+    padding: 0 20px;
+}
+.hireMeSection .imageContainer img{
+    width: 100%;
+    cursor: pointer;
+}
+.hireMeSection .imageContainer:hover img:nth-child(1){
+    transform: translateX(-50%) scale(1);
+}
+.hireMeSection .imageContainer img:nth-child(1){
+    position: absolute;
+    transform-origin: center;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%) scale(0);
+    transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.hireMeSection .imageContainer img:nth-child(2){
+    position: relative;
+    z-index: 2;
+}
+
+.hireMeSection .titlesec{
+    color: #344054;
+}
+.hireMeSection p{
+    font-family: var(--regular);
+    color: #98A2B3;
+    line-height: 28px;
 }
 
 .portfolioSection {
