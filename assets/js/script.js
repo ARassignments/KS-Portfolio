@@ -22,7 +22,7 @@ function highlightLink() {
   
   if (targetSection) {
     // Find the link that corresponds to the targeted section
-    const targetLink = document.querySelector(`header .links a[href="index.html#${targetSection.id}"]:not(.logo)`);
+    const targetLink = document.querySelector(`header .links a[href="#${targetSection.id}"]:not(.logo)`);
     if (targetLink) {
       targetLink.classList.add('active');
     }
