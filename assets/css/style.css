@@ -105,6 +105,11 @@
 
 /* ============== Custom CSS ================= */
 
+::selection {
+    background-color: var(--primary-color);
+    color: var(--orange-50);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -804,10 +809,12 @@ header .mode {
     background-size: cover, cover;
     border-radius: 30px;
 }
-.servicesSection p{
+
+.servicesSection p {
     color: var(--base-100);
     font-family: var(--regular);
     font-size: 1.1rem;
+
     @media screen and (max-width:786px) {
         text-align: center;
     }
@@ -1279,11 +1286,11 @@ header .mode {
     outline-offset: 10px;
 }
 
-.portfolioSection .card:hover::after{
+.portfolioSection .card:hover::after {
     transform: translateY(100px) translateX(-20px);
 }
 
-.portfolioSection .card::after{
+.portfolioSection .card::after {
     content: attr(data-name);
     position: absolute;
     top: 0;
@@ -1301,11 +1308,11 @@ header .mode {
     transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
-.portfolioSection .card:hover::before{
+.portfolioSection .card:hover::before {
     transform: translateY(100px) translateX(-20px);
 }
 
-.portfolioSection .card::before{
+.portfolioSection .card::before {
     content: attr(data-category);
     position: absolute;
     top: 0;
@@ -1513,10 +1520,288 @@ header .mode {
     transform: translateY(-50%) scale(1.8);
 }
 
+.testimonialSection {
+    border-radius: 30px;
+    background-image: url(../images/ServiceSection/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.testimonialSection .title {
+    color: var(--base-100);
+    text-align: center;
+    text-transform: capitalize;
+    font-family: var(--semiboldUrban);
+    font-size: 2.5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: inline-block;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2.0rem;
+    }
+}
+
+.testimonialSection .title span {
+    color: var(--primary-color);
+}
+
+.testimonialSection .title::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 13px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/TestimonialsSection/snap.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media screen and (max-width: 768px) {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.testimonialSection .card {
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.testimonialSection .card .userProfile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.0rem;
+}
+
+.testimonialSection .card .userProfile .profile {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.testimonialSection .card .userProfile .profileInfo h1 {
+    color: var(--base-100);
+    font-family: var(--boldUrban);
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-bottom: -5px;
+}
+
+.testimonialSection .card .userProfile .profileInfo span {
+    color: var(--base-100);
+    font-family: var(--regularUrban);
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.testimonialSection .card .ratings {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.0rem;
+}
+
+.testimonialSection .card .ratings .stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.testimonialSection .card .ratings .stars img {
+    width: 20px;
+    height: 20px;
+}
+
+.testimonialSection .card .ratings span {
+    color: var(--base-100);
+    font-family: var(--medium);
+    text-transform: capitalize;
+    font-size: 1.0rem;
+    margin-bottom: 0;
+}
+
+.testimonialSection .card p {
+    color: #F9FAFB;
+    font-family: var(--regular);
+    text-transform: capitalize;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.discussSection .inputContainer {
+    border: 1px solid #E4E7EC;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.0rem;
+}
+
+.discussSection .inputContainer .icon {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    background-color: var(--orange-50);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discussSection .inputContainer .icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.discussSection .inputContainer:has(input:focus) {
+    border-color: var(--primary-color);
+}
+
+.discussSection .inputContainer input {
+    flex-grow: 1;
+    font-family: var(--mediumUrban);
+    color: var(--black-500);
+    font-size: 20px;
+    text-transform: capitalize;
+    height: 60px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    caret-color: var(--primary-color);
+}
+
+.discussSection .inputContainer button {
+    background-color: var(--primary-color);
+    height: 60px;
+    padding: 0 35px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    color: var(--base-100);
+    font-family: var(--mediumUrban);
+    font-size: 20px;
+}
+
+.discussSection .inputContainer button:hover {
+    background-color: var(--orange-500);
+}
+
+.discussSection .inputContainer button:active {
+    background-color: var(--orange-600);
+    scale: 0.9;
+}
+
+.discussSection .infoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.0rem;
+}
+
+.discussSection .infoContainer .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.discussSection .infoContainer .item img {
+    width: 24px;
+}
+
+.discussSection .infoContainer .item span {
+    font-family: var(--mediumUrban);
+    color: var(--black-500);
+    text-transform: capitalize;
+    font-size: 1.05rem;
+}
+
+.barSection {
+    border-radius: 30px 0 30px 0;
+    background-color: var(--primary-color);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.barSection .marqueeContainer {
+    background-color: var(--base-100);
+    width: calc(100% + 5px);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transform: rotate(-2.5deg);
+}
+.barSection .marqueeContainer .marqueeContent {
+    display: inline-flex;
+    position: relative;
+    gap: 2.5rem;
+    height: 40px;
+    width: 100%;
+    /* animation: scroll 10s linear infinite; */
+}
+.barSection .marqueeContainer .marqueeContent .item{
+    --item-duration:30s;
+    position: absolute;
+    left: max(calc(200px * var(--count-item)), 100%);
+    top: 50%;
+    width: 200px;
+    text-align: center;
+    /* background-color: red; */
+    transform: translateY(-50%);
+    animation: scroll var(--item-duration) linear infinite;
+    animation-delay: calc(var(--item-duration) / var(--count-item) * (var(--count-item) - var(--item)) * -1);
+}
+.barSection .marqueeContainer .marqueeContent span{
+    font-family: var(--mediumUrban);
+    text-transform: capitalize;
+    color: var(--black-500);
+    font-size: 1.5rem;
+    position: relative;
+}
+.barSection .marqueeContainer .marqueeContent span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 20px;
+    height: 100%;
+    background-image: url(../images/DiscussionSection/Star\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@keyframes scroll {
+    to {
+        left: -200px;
+    }
+}
+
 .resumeSection {
     border-radius: 30px;
     background-color: var(--base-200);
 }
+
 .resumeSection .nav-tabs {
     display: flex;
     flex-direction: column;
