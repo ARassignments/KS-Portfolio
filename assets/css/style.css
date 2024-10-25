@@ -2202,7 +2202,7 @@ footer .logo {
     justify-content: start;
     gap: 0.5rem;
     margin-bottom: 1.0rem;
-    
+
     @media screen and (max-width: 768px) {
         justify-content: center;
     }
@@ -2353,6 +2353,29 @@ footer hr {
 footer .socialLinks a.active,
 footer .socialLinks a:hover {
     color: var(--primary-color);
+}
+
+footer .latestContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--base-100);
+    position: relative;
+}
+
+footer .latestContainer input {
+    flex-grow: 1;
+    width: 100%;
+}
+
+footer .latestContainer button {
+    width: 20px;
+}
+
+footer .latestContainer button img {
+    width: 20px;
 }
 
 body:has(.modalSection.active) {
