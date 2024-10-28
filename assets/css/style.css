@@ -108,6 +108,7 @@
 ::selection {
     background-color: var(--primary-color);
     color: var(--orange-50);
+    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
 }
 
 html {
@@ -315,19 +316,19 @@ body:has(.modalSection.active) .whatsappChat {
     line-height: 24px;
     width: fit-content;
     text-transform: capitalize;
-    color: var(--base-content);
+    color: var(--base-100);
     font-family: var(--semibold);
     background-color: var(--primary-color);
 }
 
 .myButton span {
     color: var(--primary-color);
-    background-color: var(--base-content);
+    background-color: var(--base-100);
     height: 40px;
     width: 40px;
-    font-weight: bold;
+    font-weight: bolder;
     line-height: normal;
-    font-size: 1.1em;
+    font-size: 1.15em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2389,7 +2390,8 @@ footer .latestContainer button {
     border: none;
     border-radius: 0 13px 13px 0;
 }
-footer .latestContainer button img{
+
+footer .latestContainer button img {
     width: 25px !important;
     height: 50px;
 }
