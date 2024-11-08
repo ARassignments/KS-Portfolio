@@ -79,7 +79,7 @@ function filterData(filter){
                         }','${projects[i].pImage}','${projects[i].pLink}','${
           projects[i].pDesc
         }','${JSON.stringify(projects[i].pTech)}')">
-                        <img src="assets/images/projects/${projects[i].pImage}" alt>
+                        <img src="assets/images/projects/${projects[i].pImage}" loading="lazy" alt>
                         <div class="overlay" data-category="${projects[i].pCategory}" data-name="${projects[i].pName}"><ion-icon
                                 name="add-outline"></ion-icon></div>
                     </a>
@@ -103,7 +103,7 @@ function filterData(filter){
                           }','${projects[i].pImage}','${projects[i].pLink}','${
             projects[i].pDesc
           }','${JSON.stringify(projects[i].pTech)}')">
-                          <img src="assets/images/projects/${projects[i].pImage}" alt>
+                          <img src="assets/images/projects/${projects[i].pImage}" loading="lazy" alt>
                           <div class="overlay" data-category="${projects[i].pCategory}" data-name="${projects[i].pName}"><ion-icon
                                   name="add-outline"></ion-icon></div>
                       </a>
